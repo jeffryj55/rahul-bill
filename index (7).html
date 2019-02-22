@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ItemADD</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <style>
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6 bg-warning">
+			<br>
+        <center><h1>Trio Mess</h1></center><br><br>
+
+
+        <div class="row text-center">
+        	<div class="col-sm-4"><a href="menu.html" style="text-decoration: none;"><h4>Menu</h4></a></div>
+        	<div class="col-sm-4"><h2>Add Item</h2></div>
+        	<div class="col-sm-4"><a href="bill.html" style="text-decoration: none;"><h4>Billing</h4></a></div>
+        </div>
+        
+<br><br>
+
+        <div class="row text-center">
+        	<div class="col-sm-4">
+        		<h5>Item</h5><br>
+        		<input type="text" class="form-control" id="it">
+        	</div>
+        	<div class="col-sm-4">
+        	<h5>Price</h5><br>
+        		<input type="text" class="form-control" id="pr">
+        	</div>
+        	<div class="col-sm-4">
+        		<h5>Add</h5><br>
+        		  <button onclick="pa()" class="btn btn-success">Submit</button>
+        		  <h1 id=qq></h1>
+        	</div>
+        </div>
+<br><br>
+		</div>
+     <div class="col-sm-3"></div>
+	</div>
+</div>
+</body>
+<script>
+
+	
+
+var a=[];
+function pa()
+	{
+var x = document.getElementById("it").value;
+var y = document.getElementById("pr").value;
+var data = { 'item': x, 'price' : y,}
+ var a=JSON.parse(localStorage.getItem('user'));
+  a.push(data);
+ localStorage.setItem('user', JSON.stringify(a));
+
+console.log(data)
+}
+
+
+
+</script>
+
+
+
+
+</html>
